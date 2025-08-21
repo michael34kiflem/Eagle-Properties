@@ -16,7 +16,7 @@ function NavBar() {
    
    
     <div className="company-information-container">
-                <a href='/location' className='company-section-text'>Find The Location</a>
+                <a href='#map' className='company-section-text'>Find The Location</a>
   
 
           </div>

@@ -5,7 +5,7 @@ import Map from '../components/Map/Map'
 import Service from '../components/Service/Service'
 import Company from '../components/Comany/Company'
 import BookConsult from '../components/BookConsult/BookConsult'
-import Address from './Address'
+
 
 function Home() {
   return (

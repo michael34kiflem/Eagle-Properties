@@ -18,13 +18,10 @@ function App() {
     <div className="App">  
  
     <NavBar />
-   <Router>
-    <Routes >
-      <Route path='/' element={<Home />} />
-      <Route path='/location' element={<Address />} />
-    </Routes>
 
-    </Router>
+
+     <Home />
+
     <Footer />
              
        </div>
