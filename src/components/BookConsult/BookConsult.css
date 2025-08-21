@@ -1,0 +1,43 @@
+/* Add font imports at the top */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@700&family=Roboto+Serif:wght@400;500&display=swap');
+
+.book-consult-container {
+  min-height: 70vh;
+  background: linear-gradient(120deg, #e3f2fd 0%, #f5f7fa 100%);
+
+
+}
+
+.book-consult-paper {
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(26,35,126,0.10);
+  background: rgba(255,255,255,0.95);
+}
+
+.book-consult-form .MuiTextField-root {
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
+.book-consult-form .MuiButton-root {
+  margin-top: 8px;
+}
+
+/* Typography styles */
+.book-consult-title {
+  font-family: 'Roboto Flex', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.book-consult-subtitle,
+.book-consult-description {
+  font-family: 'Roboto Serif', Georgia, serif;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .book-consult-paper {
+    flex-direction: column !important;
+    padding: 2rem !important;
+  }
+}

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@700&family=Roboto+Serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+.service-container {
+  background: #f5f7fa;
+  min-height: 80vh;
+  padding: 48px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-title {
+  font-family: 'Roboto Flex', Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  font-family: 'Roboto Serif', Georgia, serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+
+.service-cards{
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  
+
+}
+
+.service-card-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 350ms cubic-bezier(.4,0,.2,1), filter 250ms ease-in-out;
+}
+
+.service-card-image:hover{
+  transform: translateY(-4px) scale(1.05) rotate(2deg);
+  filter: saturate(1.05) brightness(0.98);
+  /* remove background-color on hover for images (keeps visual consistent) */
+}
+
+.service-card{
+  width: 95%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card-title{
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  font-family: 'Roboto Flex', Arial, sans-serif;
+  font-weight: 900;
+  padding-left: 18px;
+   z-index: 2;
+  text-align: start;
+  color: #fff;
+  margin-bottom: 8px;
+
+
+} 
+
+.service-card-description{
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  font-family: 'Roboto Serif', Georgia, serif;
+  font-weight: 300;
+  text-align: start;
+  padding-left: 18px;
+  color: #fff;
+  z-index: 2;
+  margin-bottom: 8px;
+
+}
+
+.service-explore{
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: 0;
+  font-family: 'Roboto Serif', Georgia, serif;
+  font-weight: 500;
+   z-index: 2;
+    text-align: start;
+   padding-left: 16px;
+   display: flex;
+   align-items: center;
+  color: #fff;
+  margin-bottom: 8px;
+
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+   pointer-events: none; 
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 50%);
+}

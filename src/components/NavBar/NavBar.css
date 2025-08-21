@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+.nav-bar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    align-items: center;
+    background-color: #fff;
+    height: 13vh;
+    color: black;
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    elevation: 2;
+    cursor: pointer;
+ 
+}
+
+
+.nav-bar-upper-container{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+ 
+
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.logo-Text{
+     font-family: "Roboto Flex", sans-serif;
+    font-weight: 800;
+    font-size: 34px;
+    color: #143763;
+}
+.EagleLogo{
+    width: 100px;
+    height: auto ;
+    margin-right: 10px;
+}
+
+.company-information-container{
+    display: flex;
+    gap: 20px;
+}
+
+.company-section-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.company-section-text:hover{
+    color: #034aa1;
+    cursor: pointer;
+}
+
+.subHeader{
+     background: linear-gradient(90deg, #1a237e 0%, #1976d2 100%);
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.navlink-container{
+    width: 85vw; 
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+
+.navlink {
+    padding: 12px 16px;
+    list-style: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+
+.navlink-list{
+    display: flex;
+    gap: 10px;
+}
+.navlink:hover {
+    background-color: #0d4b8c;
+}   
+
+.navlink a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
