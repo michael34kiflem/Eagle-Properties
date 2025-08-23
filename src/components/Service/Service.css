@@ -1,3 +1,4 @@
+/* Service.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@700&family=Roboto+Serif:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -12,6 +13,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .service-title {
@@ -19,6 +22,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 8px;
+  font-size: 2.5rem;
 }
 
 .service-description {
@@ -27,23 +31,37 @@
   text-align: center;
   margin-bottom: 32px;
   color: #444;
+  max-width: 800px;
+  padding: 0 20px;
+  line-height: 1.6;
 }
 
-
-.service-cards{
+/* Desktop Grid View */
+.service-cards {
   width: 80vw;
   display: grid;
-  grid-template-columns: repeat(2 , 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-
-  
-
 }
 
-.service-card-image{
+.service-card {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -52,20 +70,12 @@
   transition: transform 350ms cubic-bezier(.4,0,.2,1), filter 250ms ease-in-out;
 }
 
-.service-card-image:hover{
-  transform: translateY(-4px) scale(1.05) rotate(2deg);
+.service-card:hover .service-card-image {
+  transform: scale(1.05);
   filter: saturate(1.05) brightness(0.98);
-  /* remove background-color on hover for images (keeps visual consistent) */
 }
 
-.service-card{
-  width: 95%;
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-}
-
-.service-card-title{
+.service-card-title {
   position: absolute;
   top: 65%;
   left: 0;
@@ -73,15 +83,14 @@
   font-family: 'Roboto Flex', Arial, sans-serif;
   font-weight: 900;
   padding-left: 18px;
-   z-index: 2;
+  z-index: 2;
   text-align: start;
   color: #fff;
   margin-bottom: 8px;
-
-
+  font-size: 1.5rem;
 } 
 
-.service-card-description{
+.service-card-description {
   position: absolute;
   top: 75%;
   left: 0;
@@ -93,33 +102,212 @@
   color: #fff;
   z-index: 2;
   margin-bottom: 8px;
-
+  font-size: 0.9rem;
+  max-width: 90%;
 }
 
-.service-explore{
+.service-explore {
   position: absolute;
   top: 90%;
   left: 0;
   right: 0;
   font-family: 'Roboto Serif', Georgia, serif;
   font-weight: 500;
-   z-index: 2;
-    text-align: start;
-   padding-left: 16px;
-   display: flex;
-   align-items: center;
+  z-index: 2;
+  text-align: start;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
   color: #fff;
   margin-bottom: 8px;
-
+  font-size: 0.9rem;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   z-index: 1;
-   pointer-events: none; 
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 50%);
+  pointer-events: none; 
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 50%);
+}
+
+/* Mobile Carousel Styles */
+.mobile-carousel-container {
+  display: none;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-inner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  width: 100%;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.carousel-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.carousel-control button {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control button:hover {
+  background-color: rgba(245, 245, 245, 0.9);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #143763;
+}
+
+.mobile-card {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .service-title {
+    font-size: 2.1rem;
+  }
+  
+  .service-description {
+    font-size: 1.1rem;
+    padding: 0 30px;
+  }
+  
+  .service-cards {
+    width: 85vw;
+    gap: 15px;
+  }
+  
+  .service-card {
+    height: 350px;
+  }
+  
+  .service-card-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    padding: 40px 0;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    padding: 0 20px;
+    margin-bottom: 24px;
+  }
+  
+  .desktop-view {
+    display: none;
+  }
+  
+  .mobile-carousel-container {
+    display: block;
+  }
+  
+  .carousel-control {
+    display: none;
+  }
+  
+  .service-card {
+    height: 320px;
+  }
+  
+  .service-card-title {
+    font-size: 1.2rem;
+    top: 60%;
+  }
+  
+  .service-card-description {
+    font-size: 0.85rem;
+    top: 70%;
+  }
+  
+  .service-explore {
+    top: 85%;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-title {
+    font-size: 1.5rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+  
+  .service-card {
+    height: 280px;
+  }
+  
+  .service-card-title {
+    font-size: 1.1rem;
+    padding-left: 12px;
+  }
+  
+  .service-card-description {
+    font-size: 0.8rem;
+    padding-left: 12px;
+  }
+  
+  .service-explore {
+    padding-left: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .carousel-indicators {
+    margin-top: 15px;
+  }
 }

@@ -17,7 +17,7 @@ const Address = () => {
   const officePosition = [ 9.005401, 38.763611]; // [latitude, longitude]
   
   return (
-    <div style={{ width: '100%', height: '800px', borderRadius: '8px', overflow: 'hidden' }} id='map'>
+    <div style={{ width: '100%', height: '800px', borderRadius: '8px', overflow: 'hidden' }} id='mapcl'>
       <MapContainer
         center={officePosition}
         zoom={15}

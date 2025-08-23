@@ -1,5 +1,10 @@
 import React from 'react';
 import './Footer.css';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 function Footer() {
   return (
@@ -14,9 +19,9 @@ function Footer() {
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#service">Services</a></li>
-            <li><a href="#about">Partners</a></li>
-            <li><a href="#consult">Consultation</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#partner">Partners</a></li>
+            <li><a href="#company">About Us</a></li>
+            <li><a href="#meeting">Consultation</a></li>
           </ul>
         </div>
         <div className="footer-contact">
@@ -27,9 +32,23 @@ function Footer() {
         </div>
         <div className="footer-social">
           <h4>Follow Us</h4>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |{' '}
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |{' '}
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <FacebookIcon />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <InstagramIcon />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <LinkedInIcon />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <TwitterIcon />
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <YouTubeIcon />
+            </a>
+          </div>
         </div>
       </div>
       <div className="footer-bottom">
