@@ -100,7 +100,7 @@ function BookConsult() {
                   value={form.name}
                   onChange={handleChange}
                   fullWidth
-                  required
+                  required 
                   className="form-field"
                 />
                 <TextField
