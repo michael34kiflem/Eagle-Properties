@@ -131,7 +131,7 @@
   bottom: 0;
   z-index: 1;
   pointer-events: none; 
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 50%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.89), transparent 50%);
 }
 
 /* Mobile Carousel Styles */
@@ -263,13 +263,13 @@
   }
   
   .service-card-title {
-    font-size: 1.2rem;
-    top: 60%;
+    font-size: 1rem;
+    top: 40%;
   }
   
   .service-card-description {
-    font-size: 0.85rem;
-    top: 70%;
+    font-size: 0.55rem;
+    top: 60%;
   }
   
   .service-explore {

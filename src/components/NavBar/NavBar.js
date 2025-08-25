@@ -19,23 +19,9 @@ function NavBar() {
           <h1 className='logo-Text'>EAGLE PROPERTIES</h1>
         </a>
         
-        <div className="company-information-container">
+      
+          <div className="company-information-container">
           <a href='#map' className='company-section-text'>Find The Location</a>
-        </div>
-        
-        <div className='desktop-menu'>
-          <div className='navlink-container'>  
-            <div className='navlink-list'>
-              <li className='navlink'><a href="#home" aria-label="Home" className={window.location.hash === '#home' ? 'active' : ''}>Home</a></li>
-              <li className='navlink'><a href="#partner" aria-label="RealEstate" className={window.location.hash === '#partner' ? 'active' : ''}>RealEstate</a></li>
-              <li className='navlink'><a href="#service" aria-label="Service" className={window.location.hash === '#service' ? 'active' : ''}>Service</a></li>
-              <li className='navlink'><a href="#company" aria-label="About" className={window.location.hash === '#company' ? 'active' : ''}>Company Information</a></li>
-              <li className='navlink'><a href="#meeting" aria-label="About" className={window.location.hash === '#meeting' ? 'active' : ''}>Meeting Registration</a></li>
-            </div>
-            <div>
-              <li className='navlink'><a href="#footer" aria-label="About" className={window.location.hash === '#owner' ? 'active' : ''}>Contact a consult</a></li>
-            </div>
-          </div> 
         </div>
         
         <div className='mobile-menu-icon' onClick={toggleMenu}>

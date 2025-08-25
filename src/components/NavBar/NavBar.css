@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     padding-left: 5px;
     padding-right: 5px;
     height: 13vh;
@@ -101,12 +102,13 @@
     align-items: center;
     margin: 0;
     padding: 0;
+ 
 }
 
 .navlink {
     padding: 12px 16px;
     list-style: none;
-    color: white;
+    color: black;
     transition: background-color 0.3s;
     display: inline-block;
 }
@@ -117,7 +119,7 @@
 
 .navlink a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -198,7 +200,7 @@
     }
     
     .EagleLogo {
-        width: 80px;
+        width: 10vh ;
         height: auto;
     }
     
