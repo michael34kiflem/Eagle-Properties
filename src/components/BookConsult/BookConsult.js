@@ -151,13 +151,13 @@ Date: ${getFormattedDate()}
         <Paper className="book-consult-paper" elevation={0}>
           <Box className="book-consult-content">
             <Box className="book-consult-info">
-              <h2 variant="h4" component="h2" className="book-consult-title">
+              <h2  className="book-consult-title">
                 Book a Free Consultation
               </h2>
-              <h4 variant="h6" component="p" className="book-consult-subtitle">
+              <h4 className="book-consult-subtitle">
                 Get expert advice from our real estate specialists. Whether you're buying, selling, or investing, we'll help you make the best decision for your future.
               </h4>
-              <p variant="body1" className="book-consult-description">
+              <p className="book-consult-description">
                 Fill out the form and our team will reach out to schedule your personalized session within 24 hours.
               </p>
             </Box>
