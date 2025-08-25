@@ -199,6 +199,7 @@
   
   .book-consult-title {
     text-align: center;
+      color: #000000;
   }
 }
 
@@ -215,6 +216,7 @@
   
   .book-consult-form {
     gap: clamp(12px, 2vw, 15px);
+      color: #000000;
   }
 }
 
@@ -261,7 +263,8 @@
   }
   
   .book-consult-content {
-    flex-direction: row;
+    flex-direction: row; 
+      color: #000000;
     gap: 20px;
   }
   
@@ -302,16 +305,16 @@
 @media (prefers-color-scheme: dark) {
   .book-consult-paper {
     background: rgba(25, 25, 35, 0.95);
-    color: #ffffff;
+    color: #000000;
   }
   
   .book-consult-title {
-    color: #ffffff;
+    color: #000000;
   }
   
   .book-consult-subtitle,
   .book-consult-description {
-    color: #cccccc;
+    color: #585858;
   }
   
   .form-field {
