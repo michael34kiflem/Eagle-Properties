@@ -192,16 +192,7 @@ function About() {
       </div>
 
       {/* Indicators for mobile */}
-      <div className="carousel-indicators">
-        {Array.from({ length: maxIndex + 1 }).map((_, index) => (
-          <button
-            key={index}
-            className={`indicator ${index === currentIndex ? 'active' : ''}`}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+  
     </div>
   );
 }

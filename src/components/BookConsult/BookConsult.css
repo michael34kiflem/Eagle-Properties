@@ -1,4 +1,3 @@
-/* BookConsult.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@700&family=Roboto+Serif:wght@400;500&display=swap');
 
 .book-consult-container {
@@ -9,6 +8,7 @@
   align-items: center;
   padding: 40px 20px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .book-consult-paper {
@@ -17,14 +17,16 @@
   background: rgba(255, 255, 255, 0.95);
   width: 100%;
   max-width: 1200px;
-  padding: 40px;
+  padding: clamp(20px, 4vw, 40px);
   height: auto;
+  margin: 0 auto;
 }
 
 .book-consult-content {
   display: flex;
-  gap: 40px;
+  gap: clamp(20px, 4vw, 40px);
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .book-consult-info {
@@ -32,66 +34,79 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 300px;
 }
 
 .book-consult-title {
   font-family: 'Roboto Flex', Arial, sans-serif;
   font-weight: 700;
   color: #000000;
-  margin-bottom: 20px;
-  font-size: 2.5rem;
+  margin-bottom: clamp(15px, 2vw, 20px);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  text-align: center;
 }
 
 .book-consult-subtitle {
   font-family: 'Roboto Serif', Georgia, serif;
   font-weight: 500;
   color: #444;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  margin-bottom: clamp(15px, 2vw, 20px);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.6; 
+
+  text-align: center;
 }
 
 .book-consult-description {
   font-family: 'Roboto Serif', Georgia, serif;
   color: #444;
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 2vw, 20px);
   line-height: 1.6;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .book-consult-form-container {
   flex: 1;
+  min-width: 300px;
+  width: 100%;
 }
 
 .book-consult-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(15px, 2vw, 20px);
+  width: 100%;
 }
 
 .form-field {
   background: #f5f7fa;
   border-radius: 8px;
+  width: 100%;
 }
 
 .form-field .MuiOutlinedInput-root {
   border-radius: 8px;
-  font-size: 1.1rem; /* Increased font size */
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  width: 100%;
 }
 
 .form-field .MuiOutlinedInput-input {
-  padding: 16px 14px; /* Increased padding for larger input fields */
+  padding: clamp(12px, 2vw, 16px) clamp(10px, 2vw, 14px);
   height: auto;
-  font-size: 1.1rem; /* Increased font size */
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-field .MuiInputLabel-root {
-  font-size: 1.1rem; /* Increased label font size */
-  transform: translate(14px, 18px) scale(1); /* Adjusted label position */
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  transform: translate(clamp(10px, 2vw, 14px), clamp(16px, 2vw, 18px)) scale(1);
 }
 
 .form-field .MuiInputLabel-root.Mui-focused,
 .form-field .MuiInputLabel-root.MuiFormLabel-filled {
-  transform: translate(14px, -9px) scale(0.85); /* Adjusted label position when focused/filled */
+  transform: translate(clamp(10px, 2vw, 14px), clamp(-6px, -1vw, -9px)) scale(0.85);
 }
 
 .form-field .MuiOutlinedInput-notchedOutline {
@@ -99,42 +114,48 @@
 }
 
 .message-field textarea {
-  min-height: 120px; /* Increased minimum height for message field */
-  font-size: 1.1rem; /* Increased font size */
-  padding: 16px 14px; /* Increased padding */
+  min-height: clamp(90px, 15vw, 120px);
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  padding: clamp(12px, 2vw, 16px) clamp(10px, 2vw, 14px);
   line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .submit-button {
   background: linear-gradient(90deg, #1976d2 0%, #1a237e 100%);
   color: #fff;
   font-weight: 600;
-  padding: 16px 0; /* Increased button padding */
+  padding: clamp(12px, 2vw, 16px) 0;
   border-radius: 8px;
-  font-size: 1.2rem; /* Increased button font size */
-  letter-spacing: 1px;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(26, 35, 126, 0.08);
   margin-top: 10px;
   height: auto;
+  width: 100%;
 }
 
 .submit-button:hover {
   background: linear-gradient(90deg, #1a237e 0%, #1976d2 100%);
+  transform: translateY(-1px);
 }
 
 .submit-button:disabled {
   opacity: 0.7;
+  transform: none;
 }
 
 .error-alert {
   margin-bottom: 20px;
   border-radius: 8px;
-  font-size: 1.1rem; /* Increased alert font size */
-  padding: 12px 16px; /* Increased alert padding */
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  padding: clamp(10px, 2vw, 12px) clamp(12px, 2vw, 16px);
+  width: 100%;
 }
 
 .error-alert .MuiAlert-message {
-  font-size: 1.1rem; /* Increased alert message font size */
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .success-message {
@@ -144,173 +165,166 @@
   justify-content: center;
   height: 100%;
   text-align: center;
+  padding: 40px 20px;
 }
 
 .success-text {
   color: #388e3c;
   font-weight: 600;
-  font-size: 1.4rem; /* Increased success message font size */
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 1.4;
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .book-consult-content {
-    gap: 30px;
+    gap: clamp(15px, 3vw, 30px);
   }
   
-  .book-consult-title {
-    font-size: 2.2rem;
-  }
-  
-  .book-consult-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .form-field .MuiOutlinedInput-input,
-  .form-field .MuiInputLabel-root,
-  .message-field textarea {
-    font-size: 1.05rem;
-  }
-  
-  .submit-button {
-    font-size: 1.1rem;
-    padding: 14px 0;
+  .book-consult-paper {
+    padding: clamp(15px, 3vw, 30px);
   }
 }
 
 @media (max-width: 900px) {
-  .book-consult-paper {
-    padding: 30px;
-  }
-  
   .book-consult-content {
     flex-direction: column;
-    gap: 30px;
+    text-align: center;
   }
   
   .book-consult-info {
     text-align: center;
+    min-width: unset;
   }
   
   .book-consult-title {
-    font-size: 2rem;
-  }
-  
-  .book-consult-subtitle {
-    font-size: 1.1rem;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
   .book-consult-container {
-    padding: 30px 15px;
+    padding: clamp(15px, 3vw, 30px) clamp(10px, 2vw, 15px);
     min-height: 60vh;
   }
   
   .book-consult-paper {
-    padding: 25px;
+    padding: clamp(15px, 3vw, 25px);
     border-radius: 16px;
   }
   
-  .book-consult-title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-  
-  .book-consult-subtitle {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .book-consult-description {
-    font-size: 0.95rem;
-  }
-  
   .book-consult-form {
-    gap: 15px;
-  }
-  
-  .form-field .MuiOutlinedInput-input {
-    padding: 14px 12px;
-  }
-  
-  .message-field textarea {
-    min-height: 100px;
-    padding: 14px 12px;
-  }
-  
-  .submit-button {
-    font-size: 1rem;
-    padding: 12px 0;
-  }
-  
-  .error-alert,
-  .error-alert .MuiAlert-message {
-    font-size: 1rem;
-  }
-  
-  .success-text {
-    font-size: 1.2rem;
+    gap: clamp(12px, 2vw, 15px);
   }
 }
 
 @media (max-width: 480px) {
   .book-consult-container {
-    padding: 20px 10px;
+    padding: clamp(10px, 2vw, 20px) clamp(8px, 1.5vw, 10px);
   }
   
   .book-consult-paper {
-    padding: 20px;
+    padding: clamp(12px, 2.5vw, 20px);
+    border-radius: 12px;
   }
   
-  .book-consult-title {
-    font-size: 1.6rem;
-  }
-  
-  .book-consult-subtitle {
-    font-size: 0.95rem;
-  }
-  
-  .book-consult-description {
-    font-size: 0.9rem;
-  }
-  
-  .form-field .MuiInputLabel-root {
-    font-size: 1rem;
+  .book-consult-info,
+  .book-consult-form-container {
+    min-width: unset;
+    width: 100%;
   }
   
   .form-field .MuiOutlinedInput-input {
-    font-size: 1rem;
     padding: 12px 10px;
   }
   
   .message-field textarea {
-    font-size: 1rem;
     padding: 12px 10px;
-    min-height: 90px;
+    min-height: 80px;
   }
   
   .submit-button {
-    font-size: 0.9rem;
-    padding: 10px 0;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+ 
+  .success-message {
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+  .book-consult-container {
+    min-height: 100vh;
+    padding: 20px 15px;
   }
   
-  .error-alert,
-  .error-alert .MuiAlert-message {
-    font-size: 0.9rem;
+  .book-consult-content {
+    flex-direction: row;
+    gap: 20px;
   }
   
-  .success-text {
-    font-size: 1.1rem;
+  .book-consult-info {
+    flex: 1;
+    min-width: unset;
   }
+  
+  .book-consult-form-container {
+    flex: 1;
+    min-width: unset;
+  }
+}
 
-    .book-consult-form{
-      width: 300px;
-    }
+/* High-resolution displays */
+@media (min-resolution: 192dpi) {
+  .book-consult-title {
+    font-weight: 800;
+  }
+  
+  .submit-button {
+    font-weight: 700;
+  }
+}
 
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .book-consult-paper {
+    animation: none;
+  }
+  
+  .submit-button {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .book-consult-paper {
+    background: rgba(25, 25, 35, 0.95);
+    color: #ffffff;
+  }
+  
+  .book-consult-title {
+    color: #ffffff;
+  }
+  
+  .book-consult-subtitle,
+  .book-consult-description {
+    color: #cccccc;
+  }
+  
   .form-field {
-    width: '100%';
-  } 
+    background: rgba(45, 45, 55, 0.8);
+  }
+  
+  .form-field .MuiOutlinedInput-input {
+    color: #ffffff;
+  }
+  
+  .form-field .MuiInputLabel-root {
+    color: #cccccc;
+  }
 }
 
 /* Animation for better UX */
@@ -327,4 +341,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Focus styles for accessibility */
+.form-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+}
+
+.submit-button:focus {
+  outline: 3px solid #1976d2;
+  outline-offset: 2px;
 }
