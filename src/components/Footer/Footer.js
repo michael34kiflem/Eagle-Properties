@@ -51,7 +51,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom">a
         <p>© {new Date().getFullYear()} Eagle Properties. All rights reserved.</p>
       </div>
     </footer>

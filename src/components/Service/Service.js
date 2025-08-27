@@ -103,7 +103,7 @@ function Service() {
                 <Typography variant="body1" className="mobile-service-description">
                   {service.description}
                 </Typography>
-                <Typography variant="body1" className="mobile-service-explore">
+                <Typography variant="body1" className="mobile-service-aexplore">
                   Explore Now
                   <EastIcon sx={{ ml: 1 }} />
                 </Typography>

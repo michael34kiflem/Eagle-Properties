@@ -9,7 +9,7 @@ function Hero() {
       <img src={realestate} alt='Real Estate' className='hero-image'/>
       <div className="hero-content">
         <h1 className='hero-title'>Find Your Dream Home</h1>
-        <p className='hero-description'>Explore the best properties in your area</p>
+        <p className='hero-description'>Where Properties Take Flight</p>
       </div>
     </div>
   )
